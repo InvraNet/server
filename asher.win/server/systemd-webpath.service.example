@@ -1,14 +1,17 @@
 [Unit]
-Description=Apache web server
+Description=Node.js Express Server
 After=network.target
-Before=nextcloud-web.service
 
 [Service]
 ExecStart=/usr/bin/node /var/www/html/server/main.js
-Type=notify
 Restart=always
-
+User=www-data
+Group=www-data
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/html/server
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=webpath
 
 [Install]
-WantedBy=default.target
-RequiredBy=network.target
+WantedBy=multi-user.target
