@@ -13,23 +13,23 @@
   <div id="content">
     <div id="deviceInfoModal">
       <div id="deviceInfo">
-        <p>IP Address: <span id="deviceModalIP">IP ADDR</span></p>
-        <p>Search Domain: <span id="deviceModalSearchDomain">NOT.AVAILABLE</span></p>
+        <p>IP Address: <span id="deviceModalIP">IP ADDR</span><button id="ipAddrCopy">&#x1F4CB;</button></p>
+        <p>Search Domain: <span id="deviceModalSearchDomain">NOT.AVAILABLE</span><button id="searchDomainCopy">&#x1F4CB;</button></p>
       </div>
     </div>
   </div>
+
   <footer>
-    <ul>
-      <a href="https://invra.net">Developer</a>
+    <ul class="footer-links">
+        <li><a href="https://invra.net">Developer</a></li>
     </ul>
-    <ul>
-      <a href="ms-settings:printers">Printer Settings</a>
+    <ul class="footer-links">
+        <li><a href="ms-settings:printers">Printer Settings</a></li>
+        <li><a href="ms-settings:network-status">Network Settings</a></li>
     </ul>
-    <ul>
-      <a href="ms-settings:network-status">Network Settings</a>
-    </ul>
-  </footer>
+</footer>
   <script src="src/js/test.js"></script>
   <script src="src/js/getInfo.js"></script>
+  <script src="src/js/copyInfo.js"></script>
 </body>
 </html>
